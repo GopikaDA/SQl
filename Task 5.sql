@@ -41,8 +41,12 @@ left join departments d on s.department_id=d.department_id;
 select * from students s
 right join departments d on s.department_id=d.department_id;
 
-select * from departments
+select department_id from departments
 union  all
-select department_id,student_name from students;
+select department_id from students;
+
+select department_id from departments
+union  
+select department_id from students;
 
 
